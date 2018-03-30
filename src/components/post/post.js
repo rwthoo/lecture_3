@@ -3,6 +3,26 @@ import './post.css';
 import { Avatar } from '../avatar';
 import { Comment } from './comment.js';
 
+export class Post extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: this.props.comments
+    };
+  }
+
+  handleCommentSubmission(event){
+    event.preventDefault();
+    const text = event.target[0].value;
+
+//create a comments
+const comment = {
+  owner: "rwthoo",
+  text: text,
+}
+  }
+}
+
 export const Post = (props) => (
   <div className="post">
     <div className="post__header">
