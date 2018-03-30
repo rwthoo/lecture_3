@@ -20,6 +20,17 @@ const comment = {
   owner: "rwthoo",
   text: text,
 }
+
+// add comment and create a new state
+const comments = this.state.comments;
+comments.push(comment);
+
+//update the state
+this.setState({
+  comments: comments
+})
+
+event.target[0].value ="";
   }
 }
 
