@@ -5,7 +5,7 @@
 
 .post__avatar, .post__header-info {
   display: inline-block;
-  padding-right: 15px; 
+  padding-right: 15px;
 }
 
 .post__img {
@@ -27,9 +27,13 @@
   border: 0;
   outline: 0;
   font-size: inherit;
-  margin: 15px auto;
 }
 
 .post__likes {
   margin: 5px auto;
+  outline: 2px solid red;
+}
+
+.post__comment-form {
+  margin: 15px auto;
 }

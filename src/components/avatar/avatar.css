@@ -9,3 +9,15 @@
   width: 100%;
   height: auto;
 }
+.like{
+  padding-top: 2px;
+  width: 68px;
+  height:24px;
+  background-color:Lightgrey;
+  position:absolute;
+  right:425px;
+  top:50px;
+  text-decoration-color: black;
+  text-align: center;
+  border-radius: 5px;
+}
