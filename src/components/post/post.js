@@ -43,6 +43,15 @@ handleCommentSubmission(event) {
   });
 }
 
+handleLikeClick(){
+  if(this.state.isLikedByMe){
+    this.setState({
+      isLikedByMe: false,
+
+    })
+  }
+}
+
   render(){
     return (
       <div className="post">
@@ -57,7 +66,11 @@ handleCommentSubmission(event) {
        </div>
        <img className="post__img" src={this.props.imageUrl} alt='post'/>
        <div className="post__body">
-         <div className="post__likes"><b>{this.props.likes} likes</b></div>
+         <div className="post__likes"><b>{this.props.likes} likes</b>
+         <button onClick={()=> this.handleLikeClick()}>
+         {this.state.isLikedByMe ? 'unlike:"like"'}
+         </button>
+         </div>
          { this.props.comments.map(comment => <Comment owner={comment.owner} text={comment.text} />) }
          <hr className="post__body-separator" />
          <form
